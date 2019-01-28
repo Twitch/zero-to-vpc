@@ -1,6 +1,6 @@
 # Zero-to-VPC
 
-This should build a working VPC with an Ubuntu 16.04 jump box, 1 CentOS 6 server, and 1 CentOS 7 server. You can change these with the "count" variable in vars.tf, and the AMIs used for each with the "*_ami" variables in the same location.
+This should build a working VPC with an Ubuntu 16.04 jump box, 1 CentOS 6 server, and 1 CentOS 7 server. You can change these with the "count" variable in vars.tf, and the AMIs used for each with the "*_ami" variables in the same location. (Be sure to check the ami values and ensure you have access to these AMIs in your account/region)
 
 You will need to decide how to provide access credentials until we have Vault implemented. You can pull them from your AWS CLI credentials file, export them to environment variables, or store them in a static credentials.tf file (an example of this is provided, but there are better ways).
 
@@ -16,6 +16,7 @@ In vars.tf:
 - Change the "vpc_cidr" to a value that's all yours
 - Change the "pref" value to something you'd like to use to uniquely identify all objects created by this terraform plan
 - Change the "keypair" to a keypair that you own and wish to use for access to these instances
+- You will also likely need to adjust the ami variables as these are account, region, and subscription dependent.
 
 You **MAY** wish to modify some of the following, as well
 + In vars.tf:
