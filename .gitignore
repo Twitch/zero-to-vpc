@@ -1,0 +1,11 @@
+# Ignore state files
+terraform.tfstate*
+
+# Ignore static credentials file (In the future, these shouldn't be necessary.)
+credentials.tf
+
+# Ignore temporary lockstate file, in case it gets left behind
+.terraform.tfstate.lock.info
+
+# Ignore plugins directory, these should be created locally
+.terraform/
